@@ -227,6 +227,8 @@ export function DenWorksLandingPageComponent() {
             </p>
           </div>
         </section>
+        <br />
+        <br />
 
         <section
           id="services"
