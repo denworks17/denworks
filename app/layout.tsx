@@ -16,6 +16,9 @@ const geistMono = localFont({
 export const metadata: Metadata = {
   title: "Den Works",
   description: "INNOVATE.CREATE.DELIVER.",
+  icons: {
+    icon: "/logo.png",
+  },
 };
 
 export default function RootLayout({

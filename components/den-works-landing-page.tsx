@@ -3,9 +3,8 @@
 import { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
 import { Menu, X, InstagramIcon, MailIcon, Twitter as TwitterIcon} from "lucide-react";
+import Image from 'next/image';
 
 import Link from "next/link";
 
@@ -61,7 +60,7 @@ export function DenWorksLandingPageComponent() {
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  }, [sections]);
 
   const scrollToSection = (sectionId: string) => {
     const section = document.getElementById(sectionId);
@@ -94,7 +93,7 @@ export function DenWorksLandingPageComponent() {
       <header className="fixed top-0 left-0 right-0 z-50 p-4">
         <div className="container mx-auto flex justify-between items-center">
           <Link href="/" className="flex items-center">
-            <img src="/logo.png" alt="Den Works Logo" className="h-20" />
+            <Image src="/logo.png" alt="Den Works Logo" className="h-20" width={80} height={80} />
           </Link>
           <nav className="hidden md:flex space-x-8">
             {sections.map((section) => (
